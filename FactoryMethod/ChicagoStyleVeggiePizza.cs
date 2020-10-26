@@ -2,6 +2,9 @@
 
 namespace FactoryMethod
 {
+    /// <summary>
+    /// Veggie pizza produced by the <see cref="ChicagoPizzaStore"/>.
+    /// </summary>
     internal sealed class ChicagoStyleVeggiePizza : Pizza
     {
         internal ChicagoStyleVeggiePizza()

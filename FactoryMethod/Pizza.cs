@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace FactoryMethod
 {
+    /// <summary>
+    /// Product produced by the factory by <see cref="PizzaStore"/>.
+    /// </summary>
     internal abstract class Pizza
     {
         public string Name { get; set; }

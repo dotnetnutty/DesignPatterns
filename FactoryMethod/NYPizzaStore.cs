@@ -1,18 +1,18 @@
 ﻿namespace FactoryMethod
 {
+    /// <summary>
+    /// Implements the <see cref="CreatePizza(string)"/> factory method.
+    /// </summary>
     internal class NYPizzaStore : PizzaStore
     {
         protected override Pizza CreatePizza(string pizzaType)
         {
-            switch (pizzaType)
+            return pizzaType switch
             {
-                case "cheese":
-                    return new NYStyleCheesePizza();
-                case "veggie":
-                    return new NYStyleVeggiePizza();
-                default:
-                    return null;
-            }
+                "cheese" => new NYStyleCheesePizza(),
+                "veggie" => new NYStyleVeggiePizza(),
+                _ => null,
+            };
         }
     }
 }
